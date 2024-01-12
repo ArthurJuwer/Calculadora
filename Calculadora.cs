@@ -23,10 +23,7 @@ namespace Calculadora
             InitializeComponent();
         }
 
-        private void txtResultado_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void adicionarNumero(object sender, EventArgs e)
         {
@@ -46,6 +43,12 @@ namespace Calculadora
         }
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            /* 
+                Pegar o valor da tag de cada botão acionado(click)
+                variaveis receberem o valor de cada verificacao 
+                Printarem na tela
+                               
+            */
             numero2 = Convert.ToDouble(txtResultado.Text);
 
             if (operador == '+')
@@ -79,12 +82,38 @@ namespace Calculadora
         }
         private void ClickOperador(object sender, EventArgs e)
         {
+            /* 
+                Pegar o valor da tag de cada botão acionado(click)
+                variaveis receberem o valor de cada verificacao 
+                Printarem na tela
+                Recurso de MATH utilizado
+            */
             var button = ((Button)sender);
 
             numero1 = Convert.ToDouble(txtResultado.Text);
             operador = Convert.ToChar(button.Tag);
 
             txtResultado.Text = "0";
+
+
+            if (operador == '√')
+            {
+                numero1 = Math.Sqrt(numero1);
+                txtResultado.Text = numero1.ToString();
+            }
+            else if (operador == '%')
+            {
+                numero1 = numero1 / 100;
+                txtResultado.Text = numero1.ToString();
+            }
+            else if (operador == '±')
+            {
+                numero1 = numero1 * -1;
+                txtResultado.Text = numero1.ToString();
+
+            }
+
+
         }
     }
 }

@@ -64,7 +64,6 @@
             this.txtResultado.TabIndex = 0;
             this.txtResultado.Text = "0";
             this.txtResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtResultado.TextChanged += new System.EventHandler(this.txtResultado_TextChanged);
             // 
             // btnAC
             // 
@@ -83,8 +82,10 @@
             this.btnMaisMenos.Name = "btnMaisMenos";
             this.btnMaisMenos.Size = new System.Drawing.Size(84, 70);
             this.btnMaisMenos.TabIndex = 3;
+            this.btnMaisMenos.Tag = "±";
             this.btnMaisMenos.Text = "+/-";
             this.btnMaisMenos.UseVisualStyleBackColor = true;
+            this.btnMaisMenos.Click += new System.EventHandler(this.ClickOperador);
             // 
             // btnExcluir
             // 
@@ -282,8 +283,10 @@
             this.btnRaiz.Name = "btnRaiz";
             this.btnRaiz.Size = new System.Drawing.Size(84, 70);
             this.btnRaiz.TabIndex = 22;
+            this.btnRaiz.Tag = "√";
             this.btnRaiz.Text = "√";
             this.btnRaiz.UseVisualStyleBackColor = true;
+            this.btnRaiz.Click += new System.EventHandler(this.ClickOperador);
             // 
             // btnC
             // 
@@ -302,8 +305,10 @@
             this.btnPorcentagem.Name = "btnPorcentagem";
             this.btnPorcentagem.Size = new System.Drawing.Size(84, 70);
             this.btnPorcentagem.TabIndex = 24;
+            this.btnPorcentagem.Tag = "%";
             this.btnPorcentagem.Text = "%";
             this.btnPorcentagem.UseVisualStyleBackColor = true;
+            this.btnPorcentagem.Click += new System.EventHandler(this.ClickOperador);
             // 
             // Calculadora
             // 
