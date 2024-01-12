@@ -113,8 +113,10 @@
             this.btnMultiplicacao.Name = "btnMultiplicacao";
             this.btnMultiplicacao.Size = new System.Drawing.Size(84, 70);
             this.btnMultiplicacao.TabIndex = 9;
+            this.btnMultiplicacao.Tag = "*";
             this.btnMultiplicacao.Text = "*";
             this.btnMultiplicacao.UseVisualStyleBackColor = true;
+            this.btnMultiplicacao.Click += new System.EventHandler(this.ClickOperador);
             // 
             // btnDivisao
             // 
@@ -123,8 +125,10 @@
             this.btnDivisao.Name = "btnDivisao";
             this.btnDivisao.Size = new System.Drawing.Size(84, 70);
             this.btnDivisao.TabIndex = 8;
+            this.btnDivisao.Tag = "/";
             this.btnDivisao.Text = "/";
             this.btnDivisao.UseVisualStyleBackColor = true;
+            this.btnDivisao.Click += new System.EventHandler(this.ClickOperador);
             // 
             // btnSubtracao
             // 
@@ -133,8 +137,10 @@
             this.btnSubtracao.Name = "btnSubtracao";
             this.btnSubtracao.Size = new System.Drawing.Size(84, 70);
             this.btnSubtracao.TabIndex = 7;
+            this.btnSubtracao.Tag = "-";
             this.btnSubtracao.Text = "-";
             this.btnSubtracao.UseVisualStyleBackColor = true;
+            this.btnSubtracao.Click += new System.EventHandler(this.ClickOperador);
             // 
             // btnAdicao
             // 
@@ -143,8 +149,10 @@
             this.btnAdicao.Name = "btnAdicao";
             this.btnAdicao.Size = new System.Drawing.Size(84, 70);
             this.btnAdicao.TabIndex = 6;
+            this.btnAdicao.Tag = "+";
             this.btnAdicao.Text = "+";
             this.btnAdicao.UseVisualStyleBackColor = true;
+            this.btnAdicao.Click += new System.EventHandler(this.ClickOperador);
             // 
             // btn00
             // 
@@ -199,6 +207,7 @@
             this.btnEnter.TabIndex = 21;
             this.btnEnter.Text = "=";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btn03
             // 
