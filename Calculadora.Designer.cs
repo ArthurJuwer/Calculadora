@@ -74,6 +74,7 @@
             this.btnAC.TabIndex = 2;
             this.btnAC.Text = "AC";
             this.btnAC.UseVisualStyleBackColor = true;
+            this.btnAC.Click += new System.EventHandler(this.btnAC_Click);
             // 
             // btnMaisMenos
             // 
@@ -96,6 +97,7 @@
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.Text = "< -";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnVirgula
             // 
@@ -106,6 +108,7 @@
             this.btnVirgula.TabIndex = 4;
             this.btnVirgula.Text = ",";
             this.btnVirgula.UseVisualStyleBackColor = true;
+            this.btnVirgula.Click += new System.EventHandler(this.btnVirgula_Click);
             // 
             // btnMultiplicacao
             // 
@@ -297,6 +300,7 @@
             this.btnC.TabIndex = 23;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnPorcentagem
             // 
@@ -314,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 597);
+            this.ClientSize = new System.Drawing.Size(399, 597);
             this.Controls.Add(this.btnPorcentagem);
             this.Controls.Add(this.btnC);
             this.Controls.Add(this.btnRaiz);

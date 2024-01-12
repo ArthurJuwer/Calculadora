@@ -14,8 +14,8 @@ namespace Calculadora
     public partial class Calculadora : Form
     {
         // variaveis globais
-        double numero1 = 0, numero2 = 0;
-        char operador;
+        double numero1 = 0, numero2 = 0; // double = numeros com virgula
+        char operador; // 
 
 
         public Calculadora()
@@ -80,6 +80,49 @@ namespace Calculadora
             }
 
         }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            /* 
+                Limpar o atual valor
+            */
+            txtResultado.Text = "0";
+        }
+        private void btnAC_Click(object sender, EventArgs e)
+        {
+            /* 
+                Limpar todos os valores                
+            */
+            txtResultado.Text = "0";
+            numero1 = 0;
+            numero2 = 0;
+            operador = '\0';
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtResultado.Text.Length > 1)
+            {
+                txtResultado.Text = txtResultado.Text.Substring(0, txtResultado.Text.Length - 1);
+            }
+            else
+            {
+                txtResultado.Text = "0";
+            }
+        }
+
+        private void btnVirgula_Click(object sender, EventArgs e)
+        {
+            /* 
+                clicar no botao e acionar verificação
+                Verificação, caso conter for diferente de ","
+                printar na tela uma virgula
+                
+            */
+            if (!txtResultado.Text.Contains(","))
+            {
+                txtResultado.Text += ",";
+            }
+        }
         private void ClickOperador(object sender, EventArgs e)
         {
             /* 
@@ -94,7 +137,6 @@ namespace Calculadora
             operador = Convert.ToChar(button.Tag);
 
             txtResultado.Text = "0";
-
 
             if (operador == '√')
             {
